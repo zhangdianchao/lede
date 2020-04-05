@@ -74,6 +74,12 @@ jobs:
            # ==========ssr-plus-Jo   ssr-plus-lean不要一起编译  +vssr   ==========
            # ==========以上是示范如何加入tar.xz解包和拉github源码编译==========
           
+      - name: 自定义插件主题。
+        run: |
+          cd package
+          mkdir openwrt-packages
+          cd openwrt-packages
+          git clone https://github.com/jefferymvp/luci-app-koolproxyR.git
            
       - name: Update feeds
         run: |
@@ -246,6 +252,7 @@ jobs:
             CONFIG_PACKAGE_luci-app-ssr-libev-server=y
             CONFIG_PACKAGE_luci-app-ssr-python-pro-server=y
             CONFIG_PACKAGE_luci-app-transmission=y
+            CONFIG_PACKAGE_luci-app-koolproxyR=y
             CONFIG_LUCI_LANG_redsocks2=y
             CONFIG_LUCI_LANG_en=y
             CONFIG_LUCI_LANG_zh-tw=y
