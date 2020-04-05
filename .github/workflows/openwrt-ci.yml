@@ -57,8 +57,7 @@ jobs:
         run: |
            rm    -rfv  package/lean/autocore
            rm    -rfv  package/lean/luci-app-adbyby-plus
-           cd package
-           mkdir diy
+           mkdir package/diy
            cd package/diy
            tar   xvJf  luci-app-docker.tar.xz
            tar   xvJf  luci-app-koolddns.tar.xz
